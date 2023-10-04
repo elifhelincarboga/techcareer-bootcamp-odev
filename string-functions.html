@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //"  Çağatay Yıldız" isimli metindeki boşlukları kaldır.
+    var metin = "  Çağatay Yıldız";
+    var yeniMetin = metin.replace(/\s+/g, '');
+    
+    console.log(yeniMetin);
+
+
+    //"cagatay yildiz" kelimesindeki boşlukları temizle ve tüm harfleri büyült.
+    var metin = "cagatay yildiz";
+    var yeniMetin = metin.replace(/\s+/g, '').toUpperCase();
+
+    console.log(yeniMetin);
+
+
+    //"******Çağatay Yıldız" isimli metindeki yıldızları kaldır.
+    var metin = "******Çağatay Yıldız";
+    var yeniMetin = metin.replace(/\*/g, '');
+    
+    console.log(yeniMetin);
+
+
+    //"Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap.
+    var metin = "Çağatay  Yıldız";
+    var yeniMetin = metin.replace(/\s+/g, ' ');
+
+    console.log(yeniMetin);
+
+
+    //"**Tech Career**" isimli metindeki yıldızları kaldır
+    var metin = "**Tech Career**";
+    var yeniMetin = metin.replace(/\*/g, '');
+
+    console.log(yeniMetin);
+
+
+    //"Tech Career" isimli metnin soluna ve sağına 3 yıldız koy.
+    var metin = "Tech Career";
+    var yeniMetin = "***" + metin + "***";
+
+    console.log(yeniMetin);
+
+
+    //"Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült.
+    var metin = "Tech Career Bilişim teknolojileri";
+    var sonKelime = metin.substring(metin.lastIndexOf(' ') + 1);
+    var yeniMetin = metin.replace(sonKelime, sonKelime.toUpperCase());
+
+    console.log(yeniMetin);
+
+
+    //"Tech bilişim" kelimelerin ilk harflerini büyült.
+    var metin = "Tech bilişim";
+    var kelimeler = metin.split(' ');
+    for (var i = 0; i < kelimeler.length; i++) {
+        kelimeler[i] = kelimeler[i].substring(0, 1).toUpperCase() + kelimeler[i].substring(1);
+    }
+    var yeniMetin = kelimeler.join(' ');
+
+    console.log(yeniMetin);
+</script>
+</html>
